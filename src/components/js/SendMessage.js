@@ -23,12 +23,22 @@ const SendMessage = ({ scroll }) => {
     setMessage("");
     scroll.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  // Send message on enter key press
+  // Add new line with shift+enter
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage(e);
+    }
+  }
+
   return (
     <form onSubmit={(event) => sendMessage(event)} className="send-message">
       <label htmlFor="messageInput" hidden>
         Enter Message
       </label>
-      <input
+      <textarea
         id="messageInput"
         name="messageInput"
         type="text"
@@ -36,7 +46,8 @@ const SendMessage = ({ scroll }) => {
         placeholder="type message..."
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-      />
+        onKeyDown={handleKeyPress}
+      ></textarea>
       <button type="submit">&#11166;</button>
     </form>
   );

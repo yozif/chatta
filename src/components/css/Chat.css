@@ -1,8 +1,17 @@
 /* chat component */
 .messages-wrapper {
     padding: 30px;
+    margin-top: 60px;
     margin-bottom: 60px;
     background-color: #F6F7F8;
+  }
+  .chat-bubble-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .chat-bubble-wrapper.right {
+    justify-content: flex-end;
   }
   .chat-bubble {
     border-radius: 20px 20px 20px 0;
@@ -11,16 +20,15 @@
     color: #071013;
     width: max-content;
     max-width: calc(100% - 50px);
-    box-shadow: -4px 4px 4px 0px rgb(185 185 185);
+    box-shadow: -2px 2px 2px 0px rgb(185 185 185);
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
   }
   .chat-bubble.right {
-    margin-left: auto;
     border-radius: 20px 20px 0 20px;
     background-color: #30BCED;
-    box-shadow: -4px 4px 4px 0px rgb(185 185 185);
+    box-shadow: -2px 2px 2px 0px rgb(185 185 185);
     color: #fff;
   }
   .chat-bubble.right .user-name {

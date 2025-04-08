@@ -7,7 +7,8 @@
   background-color: #edeeefe3;
   display: flex;
 }
-.send-message > input {
+.send-message > textarea {
+  resize: none;
   height: 40px;
   padding: 10px 10px;
   border-radius: 5px 0 0 5px;
@@ -18,11 +19,11 @@
   font-size: 1rem;
   cursor: text;
 }
-.send-message > input:focus {
+.send-message > textarea:focus {
     outline: none !important;
     border-bottom: 1px solid #6CAE75;
 }
-.send-message > input:placeholder {
+.send-message > textarea:placeholder {
   color: #ddd;
 }
 .send-message > button {
