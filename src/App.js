@@ -2,8 +2,8 @@ import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import "./App.css";
 import NavBar from "./components/js/NavBar";
-import Chat from "./components/js/Chat";
 import Welcome from "./components/js/Welcome";
+import CreateGroup from "./components/js/CreateGroup";
 
 function App() {
   const [user] = useAuthState(auth);
@@ -11,7 +11,7 @@ function App() {
   return (
     <main>
       <NavBar />
-      {user ? <Chat /> : <Welcome />}
+      {user ? <CreateGroup /> : <Welcome />}
     </main>
   );
 }
