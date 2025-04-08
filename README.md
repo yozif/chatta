@@ -4,6 +4,10 @@ Chatta is a React messaging app!
 
 ![alt text](https://github.com/yozif/chatta/blob/master/src/img/CHATTA-1.png?raw=true)
 
+## Screenshots
+
+![alt text](https://github.com/yozif/chatta/blob/master/screenshots/chatta_ss.png?raw=true)
+
 ## Available Scripts
 
 In the project directory, you can run:
